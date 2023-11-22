@@ -3,6 +3,8 @@
 */
 import javascript
 
-from FunctionCall call
-where call.getTarget().getName() = "pressActionKey"
-select call
+from Function test, Function callee
+where isTest(test) and
+      calls(test, callee) and
+      callee.getName() = "pressActionKey"
+select test
