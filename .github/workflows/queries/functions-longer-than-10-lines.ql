@@ -3,6 +3,8 @@
 */
 import javascript
 
+from javascript import FunctionLike
+
 from FunctionLike function
 where function.getNumLines() > 10
 select function
