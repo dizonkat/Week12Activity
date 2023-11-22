@@ -3,8 +3,8 @@
 */
 import javascript
 
-from FunctionLike method, FunctionLike test
+from Method method, Function test
 where method.isPublic() and
-      calls(test, method) and
-      test.hasAnnotationWithName("test")
+      test.hasAnnotationWithName("test") and
+      method.getAsts().getAnExpr().getAFunction().getAFunctionCall().getFunction() = test
 select method, test
